@@ -22,7 +22,7 @@ const CreateBook = () => {
     if (validateForm()) {
       try {
         const response = await axios.post(
-          "https://book-store-new-kappa.vercel.app/createbook",
+          "https://book-store-new-kappa.vercel.app/book/createbook",
           formData
         );
         if (response.data.status === true)
