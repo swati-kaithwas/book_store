@@ -10,7 +10,7 @@ const GetAllbook = () => {
   useEffect(() => {
     // Fetch data from the API
     axios
-      .get("http://localhost:3001/book/getallbook")
+      .get("https://book-store-new-kappa.vercel.app/getallbook")
       .then((response) => {
         setBooks(response.data.data);
       })
@@ -21,7 +21,7 @@ const GetAllbook = () => {
 
   const handleDelete = (bookId) => {
     axios
-      .delete(`http://localhost:3001/book/deletebook/${bookId}`)
+      .delete(`https://book-store-new-kappa.vercel.app/deletebook/${bookId}`)
       .then((response) => {
         setBooks((prevBooks) =>
           prevBooks.filter((book) => book._id !== bookId)

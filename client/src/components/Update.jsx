@@ -18,7 +18,7 @@ const Update = () => {
   useEffect(() => {
     // Fetch book data for editing
     axios
-      .post("http://localhost:3001/book/getbookById", { id }) // Send ID in the request payload
+      .post("https://book-store-new-kappa.vercel.app/book/getbookById", { id }) // Send ID in the request payload
       .then((response) => {
         setFormData(response.data.data);
       })
@@ -34,7 +34,7 @@ const Update = () => {
     if (validateForm()) {
       try {
         const response = await axios.put(
-          `http://localhost:3001/book/updatebook/${id}`,
+          `https://book-store-new-kappa.vercel.app/book/updatebook/${id}`,
           formData
         );
         if (response.data.status === true) {
